@@ -1,0 +1,193 @@
+
+
+
+/* .li-item{
+    transition: all 0.5s;
+    transform: translateX(-15px);
+    cursor: pointer;
+} */
+
+/* .li-item:hover{
+    
+    transform: translateX(0px);
+} */
+
+
+/* #checkbox {
+  z-index: 1;
+  inset: 0;
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+} */
+
+/* .togglee {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition-duration: .3s;
+} */
+
+/* .bars {
+  width: 100%;
+  height: 4px;
+  background-color: rgb(0, 0, 0) !important;
+  border-radius: 5px;
+  transition-duration: .3s;
+} */
+
+
+
+
+/* section{
+    padding-left: 90px !important;
+    padding-right: 6px !important;
+    padding-bottom: 40px !important;
+    overflow-x: hidden;
+} */
+
+/* .lyar1{
+    transform: translateY(150%);
+    transition: all 0.5s;
+    background-color: #ffffff94;
+} */
+
+/* .inner:hover .lyar1{
+    transform: translateY(0);
+} */
+/* .catgDecrib{
+    font-size: 17px;
+    font-weight: 500;
+}
+.filter{
+
+}
+.filter input{
+  width: 48%;
+} */
+
+/*
+src="${item.strMealThumb}"
+id="${item.idMeal}"
+${item.strMeal}
+${item.strArea}
+
+*/
+
+
+/*
+lyarArea
+lyarIngred
+lyarcatg\
+
+
+
+
+var regx = {
+  bookmarkName: /^[a-z]{3,10}$/,
+  bookmarkUrl: /^(ftp|http|https):\/\/[^ \"]+$/,
+};
+
+function vaildation(element) {
+  if (regx[element.id].test(element.value)) {
+    element.classList.add("is-valid");
+    element.classList.remove("is-invalid");
+  } else {
+    element.classList.remove("is-valid");
+    element.classList.add("is-invalid");
+  }
+}
+*/
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 80px;
+  height: 40px;
+  border-radius: 0 0 100px 100px;
+  border: 5px solid #538a2d;
+  border-top: 0;
+  box-sizing: border-box;
+  background:
+    radial-gradient(farthest-side at top,#0000 calc(100% - 5px),#e7ef9d calc(100% - 4px)), 
+    radial-gradient(2px 3px,#5c4037 89%,#0000) 0 0/17px 12px,
+    #ff1643;
+  --c:radial-gradient(farthest-side,#000 94%,#0000);
+  -webkit-mask:
+    linear-gradient(#0000 0 0),
+    var(--c) 12px -8px,
+    var(--c) 29px -8px,
+    var(--c) 45px -6px,
+    var(--c) 22px -2px,
+    var(--c) 34px  6px, 
+    var(--c) 21px  6px,
+    linear-gradient(#000 0 0);
+  mask:
+    linear-gradient(#000 0 0),
+    var(--c) 12px -8px,
+    var(--c) 29px -8px,
+    var(--c) 45px -6px,
+    var(--c) 22px -2px,
+    var(--c) 34px  6px, 
+    var(--c) 21px  6px,
+    linear-gradient(#0000 0 0);
+  -webkit-mask-composite:destination-out;
+  mask-composite:exclude,add,add,add,add,add,add;
+  -webkit-mask-repeat: no-repeat;
+  animation: l8 3s infinite;
+}
+@keyframes l8 {
+ 0%   {-webkit-mask-size: auto,0 0,0 0,0 0,0 0,0 0,0 0}
+ 15%  {-webkit-mask-size: auto,20px 20px,0 0,0 0,0 0,0 0,0 0}
+ 30%  {-webkit-mask-size: auto,20px 20px,20px 20px,0 0,0 0,0 0,0 0}
+ 45%  {-webkit-mask-size: auto,20px 20px,20px 20px,20px 20px,0 0,0 0,0 0}
+ 60%  {-webkit-mask-size: auto,20px 20px,20px 20px,20px 20px,20px 20px,0 0,0 0}
+ 75%  {-webkit-mask-size: auto,20px 20px,20px 20px,20px 20px,20px 20px,20px 20px,0 0}
+ 90%,
+ 100% {-webkit-mask-size: auto,20px 20px,20px 20px,20px 20px,20px 20px,20px 20px,20px 20px}
+}
+
+
+/*
+function setbyName(data) {
+  console.log(data.meals);
+  let cartona = "";
+  for (const item of data.meals) {
+    let chieldNode = `
+                <div class="xl:w-3/12 md:w-4/12 zero:w-full ">
+            <div class="inner p-3">
+              <div class="inner2 group cursor-pointer overflow-hidden rounded-lg  relative ">
+                <img src="${item.strMealThumb}" class="w-full rounded-lg overflow-hidden" alt="">
+                <div id="${item.idMeal}" class="lyar1 group-hover:translate-y-0  inset-0 absolute  flex flex-col items-center justify-center translate-y-[150%] transition-all duration-[0.5s] bg-[#ffffff94]">
+                    <h3 id="${item.idMeal}"  class="text-[25px] mb-2 font-[500] text-center">${item.strMeal}</h3>
+                    <p  id="${item.idMeal}" class=" text-[17px] font-[500] px-3 text-center">${item.strArea}</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        `;
+    cartona += chieldNode;
+  }
+  let row = document.getElementById("searchgCont");
+
+  row.innerHTML = cartona;
+
+  $(".lyar1").on("click", (e) => {
+    let id = e.target.getAttribute("id");
+    getMealById(id);
+  });
+}
+
+
+flex flex-nowrap items-center
+
+w-full text-center
+
+
+searchgCont
+*/

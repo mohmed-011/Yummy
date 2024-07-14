@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <title>Yummy</title>
+
+    <!-- it is complecated selector to do with Tailwind ... sorry  -->
+     <style>  
+      #checkbox:checked + .togglee #bar2 {
+  transform: translateY(14px) rotate(60deg);
+  margin-left: 0;
+  transform-origin: right;
+  transition-duration: .3s;
+  z-index: 2;
+}
+
+#checkbox:checked + .togglee #bar1 {
+  transform: translateY(28px) rotate(-60deg);
+  transition-duration: .3s;
+  transform-origin: left;
+  z-index: 1;
+}
+
+#checkbox:checked + .togglee {
+  transform: rotate(-90deg);}
+
+    </style>
+
+  </head>
+
+  <body class="dark:bg-[#e9e9e9] bg-[#212529]">
+    <div class="lodelyer fixed inset-0 bg-[#e9e9e9] flex items-center justify-center z-50  ">
+      <div class="loader z-50"></div>
+    </div>
+
+
+    <aside class="fixed flex   bottom-0 top-0 items-center z-10">
+        <div class="sidebarTab  pt-[40px] pl-[40px] pr-[40px] flex flex-col justify-between dark:bg-[#212529] bg-[#181b1d] h-screen">
+        <ul class="list-none w-[150px]">
+          <li id="#Home"  class="mb-4  dark:bg-slate-50 bg-[#212529] p-1 rounded flex flex-nowrap items-center  li-item cursor-pointer translate-x-[-20px] transition-all duration-[0.5s] hover:translate-x-0 activ ">
+            <i class="fa-solid fa-house px-2  dark:text-black text-white"></i>
+            <a
+              class=" w-full text-center dark:text-black text-white text-lg  text-center nav-lin"
+              id="#Home"
+              >
+              
+              Home</a
+            >
+          </li>
+          <li id="#Search" class="mb-4  dark:bg-slate-50 bg-[#212529] p-1 rounded flex flex-nowrap items-center  li-item cursor-pointer translate-x-[-20px] transition-all duration-[0.5s] hover:translate-x-0 ">
+            <i class="fa-solid fa-magnifying-glass px-2  dark:text-black text-white"></i>
+            <a
+              class="dark:text-black w-full text-center text-white text-lg   nav-lin"
+              >
+              Search</a
+            >
+          </li>
+          <li id="#Categories"  class="mb-4  dark:bg-slate-50 bg-[#212529] p-1 rounded flex flex-nowrap items-center  li-item cursor-pointer translate-x-[-20px] transition-all duration-[0.5s] hover:translate-x-0">
+            <i class="fa-solid fa-layer-group px-2  dark:text-black text-white"></i>
+            <a
+              class="dark:text-black w-full text-center text-white text-lg   nav-lin"
+              >
+              
+              Categories</a
+            >
+          </li>
+          <li id="#Area"class="mb-4  dark:bg-slate-50 bg-[#212529] p-1 rounded flex flex-nowrap items-center  li-item cursor-pointer translate-x-[-20px] transition-all duration-[0.5s] hover:translate-x-0">
+            <i class="fa-solid fa-earth-americas px-2  dark:text-black text-white"></i>
+            <a
+              class="dark:text-black w-full text-center text-white text-lg   nav-lin"
+              id="#count"
+              >
+              
+              Area</a
+            >
+          </li>
+          <li id="#Ingredients" class="mb-4  dark:bg-slate-50 bg-[#212529] p-1 rounded flex flex-nowrap items-center  li-item cursor-pointer translate-x-[-20px] transition-all duration-[0.5s] hover:translate-x-0">
+            <i class="fa-solid fa-drumstick-bite px-2  dark:text-black text-white"></i>
+            <a
+              class="dark:text-black w-full text-center text-white text-lg   nav-lin"
+              >
+              
+              Ingredients</a
+            >
+          </li>
+          <li id="#Random" class="mb-4  dark:bg-slate-50 bg-[#212529] p-1 rounded flex flex-nowrap items-center li-item cursor-pointer translate-x-[-20px] transition-all duration-[0.5s] hover:translate-x-0">
+            <i class="fa-solid fa-dice px-2  dark:text-black text-white"></i>
+            <a
+              class="dark:text-black w-full text-center text-white text-lg   nav-lin"
+              >
+              
+              Random</a
+            >
+          </li>
+          <li id="#Contact"  class="mb-4  dark:bg-slate-50 bg-[#212529] p-1 rounded flex flex-nowrap items-center li-item cursor-pointer translate-x-[-20px] transition-all duration-[0.5s] hover:translate-x-0">
+            <i class="fa-regular fa-envelope px-2  dark:text-black text-white"></i>
+            <a
+              class="block w-full text-center dark:text-black text-white text-lg nav-lin"
+              >
+              
+              Contact Us</a
+            >
+          </li>
+        </ul>
+        <div class="nav-footer text-white whitespace-nowrap pb-4 text-center">
+                <div class="icons pb-3">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter px-3"></i>
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="footer text-[12px]">
+                    <p>This site made by <br> <a target="_blank" href="https://www.linkedin.com/in/mohamed-faragallah-613b32295/" class="font-[500]"> M.Faragallah</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="h-screen openingTab flex flex-col items-center justify-between dark:bg-[#181b1d] bg-white  px-3 py-4 rounded-e-md ">
+        <div class="openingTabImage">
+            <img src="images/images1 (7).png" class="w-100" alt="">
+        </div>
+        
+        <div class="open relative ">
+            <input id="checkbox" type="checkbox" class="z-[1] inset-0 opacity-0 absolute cursor-pointer">
+            <label class="togglee relative size-10 cursor-pointer flex flex-col items-center justify-center gap-[10px] duration-[0.7s]" >
+                <div id="bar1" class="bars w-full h-1 dark:bg-white bg-black rounded-[5px] duration-[0.7s]"></div>
+                <div id="bar2" class="bars w-full h-1 dark:bg-white bg-black rounded-[5px] duration-[0.7s]"></div>
+                <div id="bar3" class="bars w-full h-1 dark:bg-white bg-black rounded-[5px] duration-[0.7s]"></div>
+            </label>
+            </input>
+        </div>
+        
+        <div class="">
+          <label class="relative inline-flex items-center cursor-pointer">
+  <input class="sr-only peer" value="" type="checkbox" id="Togg" />
+  <div
+    class="w-12 h-6 rounded-full ring-0 peer duration-500 outline-none bg-gray-200 overflow-hidden before:flex before:items-center before:justify-center after:flex after:items-center after:justify-center before:content-['☀️'] before:absolute before:h-5 before:w-5 before:top-1/2 before:bg-white before:rounded-full before:left-1 before:-translate-y-1/2 before:transition-all before:duration-700 peer-checked:before:opacity-0 peer-checked:before:rotate-90 peer-checked:before:-translate-y-full shadow-lg shadow-gray-400 peer-checked:shadow-lg peer-checked:shadow-gray-700 peer-checked:bg-[#383838] after:content-['🌑'] after:absolute after:bg-[#1d1d1d] after:rounded-full after:top-[2.9px] after:right-1 after:translate-y-full after:w-5 after:h-5 after:opacity-0 after:transition-all after:duration-700 peer-checked:after:opacity-100 peer-checked:after:rotate-180 peer-checked:after:translate-y-0"
+  ></div>
+</label>
+
+        </div>
+        </div>
+    </aside>
+
+<section id="Home" class=" pl-[90px] pr-[6px] pb-10 overflow-x-hidden  ">
+    
+    <div id="homeCont" class=" flex flex-wrap  gap-y-1">
+      
+      <!-- <div class="xl:w-3/12 md:w-4/12 zero:w-full ">
+            <div class="inner p-3">
+              <div class="inner2 group cursor-pointer overflow-hidden rounded-lg  relative ">
+                <img src="${item.strCategoryThumb}" class="w-full rounded-lg overflow-hidden" alt="">
+                <div id="${item.idCategory}" class="lyar1 group-hover:translate-y-0  inset-0 absolute  flex flex-col items-center justify-center translate-y-[150%] transition-all duration-[0.5s] bg-[#ffffff94]">
+                    <h3 class="text-center">${item.strCategory}</h3>
+                    <p class=" text-[17px] font-[500] px-4 text-center">${item.strCategoryDescription}<span class="font-semibold">Read More</span></p>
+                </div>
+              </div>
+            </div>
+        </div> -->
+      
+      
+
+    </div>
+</section>
+<section id="Search" class=" pl-[90px] pr-[6px] pb-10 pt-10 overflow-x-hidden hidden ">
+    
+    <div class="text-center filter flex justify-evenly pb-5">
+      <input type="text" class=" dark:outline dark:outline-black  w-[48%] rounded-md p-1  searchInput" placeholder="Search by name">
+      <input type="text" class=" dark:outline dark:outline-black  w-[48%] rounded-md p-1  stInput" placeholder="Search by first letter">
+    </div>
+
+    <div id="searchgCont" class=" flex flex-wrap  gap-y-1">
+      
+    </div>
+</section>
+<section id="Categories" class=" pl-[90px] pr-[6px] pb-10 pt-10 overflow-x-hidden hidden ">
+    
+    <div id="categCont" class=" flex flex-wrap  gap-y-1">
+
+    </div>
+</section>
+<section id="Area" class=" pl-[90px] pr-[6px] pb-10 pt-10 overflow-x-hidden hidden">
+        <div id="areaCont" class=" flex flex-wrap  gap-y-1">
+      <div class="xl:w-3/12 md:w-4/12 zero:w-full ">
+            <div class="inner p-3">
+              <div class="inner2 group cursor-pointer overflow-hidden rounded-lg  relative text-center">
+                <i class="fa-solid fa-house-laptop fa-4x text-white"></i>
+                <h2 class="text-white text-[20px] font-[600]">${item.strCategory}</h2>
+                <div id="${item.idCategory}" class="lyarcatg group-hover:translate-y-0  inset-0 absolute  flex flex-col items-center justify-center translate-y-[150%] transition-all duration-[0.5s] bg-[#ffffff94]">
+                    <h3 class="text-[25px] mb-2 font-[500] text-center">Click to show</h3>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section id="Ingredients" class=" pl-[90px] pr-[6px] pb-10 pt-10 overflow-x-hidden hidden">
+    <div id="ingreCont" class=" flex flex-wrap  gap-y-1">
+
+    </div>
+</section>
+<section id="Contact" class=" pl-[90px] pr-[6px] pb-10 pt-10 overflow-x-hidden flex items-center hidden">
+    <div class="contactForm m-auto md:w-3/4 zero:w-[90%] p-2  rounded-lg pt-3  shadow-lg ">
+      <h2 class="text-center text-[30px] dark:text-black text-white font-[600] pb-5">Sign up Free</h2>
+        <div class="flex flex-wrap justify-evenly">
+          <div class="w-[45%]">
+            <input type="text" placeholder="Enter your Name" class="contInput w-full my-4 rounded-md p-[6px] " id="UserName"/>
+            <p class="falseAl hidden bg-red-400 p-2 ps-2 rounded-lg text-center text-white text-[18px] font-medium"> <i class="fa-solid fa-exclamation fa-shake px-2"></i> Enter 3 char at lest</p>
+            <p class="trueAl hidden bg-green-500 p-2 ps-2 rounded-lg text-center text-white text-[18px] font-medium"> <i class="fa-solid fa-check fa-bounce px-2"></i> Valid Username</p>
+          </div>
+          <div class="w-[45%]">
+            <input type="text" placeholder="Enter your Email" class="contInput w-full my-4 rounded-md p-[6px] " id="UserEmail"/>
+            <p class="falseAl hidden bg-red-400 p-2 ps-2 rounded-lg text-center text-white text-[18px] font-medium"> <i class="fa-solid fa-exclamation fa-shake px-2"></i> invalid Email</p>
+            <p class="trueAl hidden bg-green-500 p-2 ps-2 rounded-lg text-center text-white text-[18px] font-medium"> <i class="fa-solid fa-check fa-bounce px-2"></i> Valid Email</p>
+          </div>
+          <div class="w-[45%]">
+            <input type="text" placeholder="Enter Egyption Phon" class="contInput w-full my-4 rounded-md p-[6px]" id="UserPhon"/>
+            <p class="falseAl hidden bg-red-400 p-2 ps-2 rounded-lg text-center text-white text-[18px] font-medium"> <i class="fa-solid fa-exclamation fa-shake px-2"></i> invalid Phon Number</p>
+            <p class="trueAl hidden bg-green-500 p-2 ps-2 rounded-lg text-center text-white text-[18px] font-medium"> <i class="fa-solid fa-check fa-bounce px-2"></i> Valid Phon Number</p>
+          </div>
+          <div class="w-[45%]">
+            <input type="text" placeholder="Enter your Age" class="contInput w-full my-4 rounded-md p-[6px]" id="UserAge"/>
+            <p class="falseAl hidden bg-red-400 p-2 ps-2 rounded-lg text-center text-white text-[18px] font-medium"> <i class="fa-solid fa-exclamation fa-shake px-2"></i> Not Valid Age </p>
+            <p class="trueAl hidden bg-green-500 p-2 ps-2 rounded-lg text-center text-white text-[18px] font-medium"> <i class="fa-solid fa-check fa-bounce px-2"></i> Valid Age </p>
+          </div>
+          <div class="w-[45%]">
+            <input type="text" placeholder="Enter your Password" class="contInput w-full my-4 rounded-md p-[6px]" id="UserPass"/>
+            <p class="falseAl hidden bg-red-400 p-2 ps-2 rounded-lg text-center text-white text-[18px] font-medium"> <i class="fa-solid fa-exclamation fa-shake px-2"></i> 8 Minimum char (at least 1 letter & number) </p>
+            <p class="trueAl hidden bg-green-500 p-2 ps-2 rounded-lg text-center text-white text-[18px] font-medium"> <i class="fa-solid fa-check fa-bounce px-2"></i> Strong Password</p>
+          </div>
+          <div class="w-[45%]">
+            <input type="text" placeholder=" Repate Password" class="contInput w-full my-4 rounded-md p-[6px]" id="UserRePass"/>
+            <p class="falseAl hidden bg-red-400 p-2 ps-2 rounded-lg text-center text-white text-[18px] font-medium"> <i class="fa-solid fa-exclamation fa-shake px-2"></i> Not The Same Password </p>
+            <p class="trueAl hidden bg-green-500 p-2 ps-2 rounded-lg text-center text-white text-[18px] font-medium"> <i class="fa-solid fa-check fa-bounce px-2"></i> Same Password</p>
+          </div>
+        </div>
+      <button  disabled="true" class="block submitBtn  py-2 px-3 border border-red-500 rounded-md w-fit dark:text-black text-white  my-3  m-auto ">Submit </button>
+    </div>
+</section>
+<section id="Show" class=" pl-[90px] pr-[6px] pb-10 pt-10 overflow-x-hidden hidden">
+    <div id="showCont" class=" flex flex-wrap  gap-y-1">
+
+    </div>
+</section>
+<section id="Details" class=" pl-[90px] pr-[6px] pb-10 pt-10 overflow-x-hidden hidden">
+    <div class=" flex justify-end ">
+      <button
+  type="button"
+  class="back me-8 bg-white text-center w-48  rounded-2xl h-14 relative font-sans text-black text-xl font-semibold group"
+>
+  <div
+    class="back bg-green-400 rounded-xl h-12 w-1/4 flex items-center justify-center absolute left-1 top-[4px] group-hover:w-[184px] z-10 duration-500"
+  >
+    <svg
+      width="25px"
+      height="25px"
+      viewBox="0 0 1024 1024"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill="#000000"
+        d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"
+      ></path>
+      <path
+        fill="#000000"
+        d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"
+      ></path>
+    </svg>
+  </div>
+  <p class="translate-x-2">Go Back</p>
+</button>
+    </div>
+
+    <!-- <a  class="back block py-1 px-3 border border-red-500 rounded-md w-fit dark:text-black text-white  mb-3 me-10 m-auto cursor-pointer"> Back</a> -->
+    <div id="TailwindRow" class=" myRow">
+      <div class=" xl:w-4/12 zero:w-full p-3">
+        <div class="">
+          <img src="images/1.jpg" class="rounded-lg" alt="">
+        </div>
+        <h2 class="text-[25px] dark:text-black text-white text-center mt-2">Honey Teriyaki Salmon</h2>
+      </div>
+      <div class=" xl:w-8/12 zero:w-full p-3">
+        <div class="">
+          <h2 class="text-[25px] text-white  my-2">Instructions</h2>
+          <p class="text-white">Mix all the ingredients in the Honey Teriyaki Glaze together. Whisk to blend well. Combine the salmon and the Glaze together. Heat up a skillet on medium-low heat. Add the oil, Pan-fry the salmon on both sides until it’s completely cooked inside and the glaze thickens. Garnish with sesame and serve immediately.</p>
+          <h2 class="text-[25px] text-white  my-2">Area : <span>Japanese</span></h2>
+          <h2 class="text-[25px] text-white  my-2">Category  : <span>Seafood</span></h2>
+          <h3 class="text-[25px] text-white  my-2"> Recipes :</h3>
+                <ul class="list-none flex gap-3 flex-wrap md:justify-start zero:justify-center">
+                    <li class="bg-slate-300 p-1 rounded-lg ">2 large Potatoes</li>
+                    <li class="bg-slate-300 p-1 rounded-lg ">2 large Potatoes</li>
+                    <li class="bg-slate-300 p-1 rounded-lg ">2 large Potatoes</li>
+                    
+                    
+                </ul>
+          <h3 class="text-[25px] text-white  py-5"> Ingredients :</h3>
+                <ul class="list-none flex gap-3 flex-wrap md:justify-start zero:justify-center">
+                    <li class="bg-slate-300 p-1 rounded-lg ">2 large Potatoes</li>
+                    <li class="bg-slate-300 p-1 rounded-lg ">2 large Potatoes</li>
+                    <li class="bg-slate-300 p-1 rounded-lg ">2 large Potatoes</li>
+                    <li class="bg-slate-300 p-1 rounded-lg ">2 large Potatoes</li>
+                    <li class="bg-slate-300 p-1 rounded-lg ">2 large Potatoes</li>
+                </ul>
+          <h3 class="text-[25px] text-white  my-2"> Tags :</h3>
+                <ul class="list-none flex gap-3 flex-wrap md:justify-start zero:justify-center">
+                    <li class="bg-slate-300 p-1 rounded-lg ">2 large Potatoes</li>
+                    <li class="bg-slate-300 p-1 rounded-lg ">2 large Potatoes</li>
+                    <li class="bg-slate-300 p-1 rounded-lg ">2 large Potatoes</li>
+                    <li class="bg-slate-300 p-1 rounded-lg ">2 large Potatoes</li>
+                  
+                </ul>
+                <div class="links flex pt-10">
+                <a href="" class="py-2 px-4  rounded-lg me-2 block bg-green-700 text-white">Source</a>
+                <a href="" class="py-2 px-4  rounded-lg ms-2 block bg-red-700 text-white">Youtube</a>
+                </div>
+                
+        </div>
+        </div>
+      </div>
+</section>
+<section id="Random" class=" pl-[90px] pr-[6px] pb-10 pt-10 overflow-x-hidden hidden">
+  <div class="flex justify-center  pb-5">
+    <button class="RandomBtn mx-auto bg-green-950 text-green-400 border border-green-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+  <span class="RandomBtn bg-green-400 shadow-green-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+  Random Meal
+</button>
+  </div>
+    <!-- <a class="RandomBtn block py-1 px-3 border w-fit dark:border-sky-950 border-sky-600 rounded-md dark:text-black text-white  mb-4  m-auto cursor-pointer"> Random Meal</a> -->
+    <div id="TailwindRandomRow" class=" myRow">
+
+      </div>
+</section>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+  </body>
+</html>
